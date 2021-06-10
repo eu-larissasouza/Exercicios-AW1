@@ -7,133 +7,165 @@
     <meta name="author" content="Larissa Alves de Souza">
     <meta name="description" content="Exercício 2 - Cadastro">
     <title>Cadastro</title>
+
+    <style type="text/css">
+        form,
+        select {
+            font-family: "Ebrima";
+            font-size: 16px;
+            color: #353839;
+        }
+        
+        input {
+            font-family: "Ebrima";
+            font-size: 16px;
+            color: #353839;
+        }
+        
+        button {
+            font-family: "Ebrima";
+            font-size: 15px;
+            margin: 15px;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <font face="Ebrima">
+    <form>
+        <fieldset id="personal">
+            <legend><b>Identificação do Usuário</b></legend>
 
-        <form>
-            <fieldset id="personal">
-                <legend><b>Identificação do Usuário</b></legend>
-                <p> <label for="name_id">Nome Completo*:</label></br>
-                    <input type="text" name="name" id="name_id" maxlength="50" required autofocus></p>
+            <p> <label for="name_id">Nome Completo*:</label></br>
+                <input type="text" name="name" id="name_id" maxlength="50" required autofocus></p>
 
-                <p> <label for="email_id">E-mail*:</label></br>
-                    <input type="text" name="email" id="email_id" maxlength="50" required autofocus></p>
+            <p> <label for="email_id">E-mail*:</label></br>
+                <input type="text" name="email" id="email_id" maxlength="50" required autofocus></p>
 
-                <p> <label for="psw_id">Senha*:</label></br>
-                    <input type="text" name="password" id="psw_id" maxlength="30" required autofocus></p>
+            <p> <label for="psw_id">Senha*:</label></br>
+                <input type="text" name="password" id="psw_id" maxlength="30" required autofocus></p>
 
-                <label for="date_id">Telefone*:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
+            <label for="date_id">Telefone*:</label></br>
+            <input type="tel" name="telefone" id="telefone_id" maxlength="11" required autofocus></p>
 
-                <p> <label for="CPF_id">CPF*</label></br>
-                    <input type="text" name="CPF" id="CPF_id" maxlength="30" required autofocus></p>
+            <p> <label for="CPF_id">CPF*</label></br>
+                <input type="text" name="CPF" id="CPF_id" maxlength="30" required autofocus></p>
 
-                <fieldset id="sexo_id">
-                    <legend>Sexo*</legend>
-                    <input type="radio" name="sexo" id="masculino">
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" name="sexo" id="feminino">
-                    <label for="feminino">Feminino</label>
-                </fieldset>
-                <label for="date_id">Data de nascimento*:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
-
-                <label for="date_id">Estado Civil*:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
-
-                <label for="date_id">Escolaridade:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
-
-                <label for="date_id">Ocupação principal:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
-
-                <label for="date_id">Renda Mensal:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
-
-                <label for="date_id">Número de Dependentes:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
+            <fieldset id="sexo_id">
+                <legend>Sexo*</legend>
+                <input type="radio" name="sexo" id="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="feminino">
+                <label for="feminino">Feminino</label>
             </fieldset>
+            </br>
 
-            <fieldset id="states">
-                <legend><b>Localização</b></legend>
-                <label for="estado_id">Estado*:</label></br>
-                <select name="estado" id="estado_id">
-                    <datalist id="Norte">
-                        <optgroup label="Norte">
-                            <option value="AC" label="Acre">
-                            <option value="AM" label="Amazonas">
-                            <option value="AP" label="Amapá">
-                            <option value="TO" label="Tocantins">    
-                            <option value="PA" label="Pará">
-                            <option value="RR" label="Roraima">
-                            <option value="RO" label="Rondônia">           
+            <label for="date_id">Data de nascimento*:</label></br>
+            <input type="date" name="date" id="date_id" /></p>
+
+            <label for="estadocivil_id">Estado Civil*:</label></br>
+            <select style="width:150px; name=" estadocivil_id " id="estado_civil ">
+                <option value=" "></option>
+                <option value="Solteiro ">Solteiro</option>
+                <option value="Casado ">Casado</option>
+                <option value="Separado ">Separado</option>
+                <option value="Divorciado ">Divorciado</option>
+                <option value="Viúvo ">Viúvo</option>
+                <option value="União Estável ">União Estável</option>
+            </select></br>
+
+            <label for="date_id ">Escolaridade:</label></br>
+            <input type="date " name="date " id="date_id " /></p>
+
+            <label for="date_id ">Ocupação principal:</label></br>
+            <input type="date " name="date " id="date_id " /></p>
+
+            <label for="date_id ">Renda Mensal:</label></br>
+            <input type="date " name="date " id="date_id " /></p>
+
+            <label for="numero_id ">Número de Dependentes:</label></br>
+            <input type="number " name="numero " id="numero_id " /></p>
+        </fieldset>
+
+        <fieldset id="localization ">
+            <legend><b>Localização</b></legend>
+
+            <label for="estado_id ">Estado*:</label></br>
+            <select name="estado " id="estado_id ">
+                    <datalist id="Norte ">
+                        <optgroup label="Norte ">
+                            <option value="AC " label="Acre ">
+                            <option value="AM " label="Amazonas ">
+                            <option value="AP " label="Amapá ">
+                            <option value="TO " label="Tocantins ">    
+                            <option value="PA " label="Pará ">
+                            <option value="RR " label="Roraima ">
+                            <option value="RO " label="Rondônia ">           
                         </optgroup>
                     </datalist>
-                    <datalist id="Nordeste">
-                        <optgroup label="Nordeste">
-                            <option value="CE" label="Ceará">     
-                            <option value="AL" label="Alagoas">     
-                            <option value="BA" label="Bahia">     
-                            <option value="MA" label="Maranhão">     
-                            <option value="PB" label="Paraíba">    
-                            <option value="PE" label="Pernambuco">     
-                            <option value="PI" label="Piauí">     
-                            <option value="RN" label="Rio Grande do Norte">
-                            <option value="SE" label="Sergipe">     
+                    <datalist id="Nordeste ">
+                        <optgroup label="Nordeste ">
+                            <option value="CE " label="Ceará ">     
+                            <option value="AL " label="Alagoas ">     
+                            <option value="BA " label="Bahia ">     
+                            <option value="MA " label="Maranhão ">     
+                            <option value="PB " label="Paraíba ">    
+                            <option value="PE " label="Pernambuco ">     
+                            <option value="PI " label="Piauí ">     
+                            <option value="RN " label="Rio Grande do Norte ">
+                            <option value="SE " label="Sergipe ">     
                         </optgroup>
                     </datalist>
-                    <datalist id="Centro-Oeste">
-                        <optgroup label="Centro-Oeste">
-                            <option value="GO" label="Goiás"> 
-                            <option value="MT" label="Mato Grosso"> 
-                            <option value="MS" label="Mato Grosso do Sul"> 
-                            <option value="DF" label="Distrito Federal"> 
+                    <datalist id="Centro-Oeste ">
+                        <optgroup label="Centro-Oeste ">
+                            <option value="GO " label="Goiás "> 
+                            <option value="MT " label="Mato Grosso "> 
+                            <option value="MS " label="Mato Grosso do Sul "> 
+                            <option value="DF " label="Distrito Federal "> 
                         </optgroup>
                     </datalist>
-                    <datalist id="Sudeste">
-                        <optgroup label="Sudeste">
-                            <option value="SP" label="São Paulo">
-                            <option value="MG" label="Minas Gerais">
-                            <option value="ES" label="Espírito Santo">
-                            <option value="RJ" label="Rio de Janeiro">
+                    <datalist id="Sudeste ">
+                        <optgroup label="Sudeste ">
+                            <option value="SP " label="São Paulo ">
+                            <option value="MG " label="Minas Gerais ">
+                            <option value="ES " label="Espírito Santo ">
+                            <option value="RJ " label="Rio de Janeiro ">
                         </optgroup>
                     </datalist>
-                    <datalist id="Sul">
-                        <optgroup label="Sul">
-                            <option value="PR" label="Paraná">
-                            <option value="SC" label="Santa Catarina">
-                            <option value="RS" label="Rio Grande do Sul">
+                    <datalist id="Sul ">
+                        <optgroup label="Sul ">
+                            <option value="PR " label="Paraná ">
+                            <option value="SC " label="Santa Catarina ">
+                            <option value="RS " label="Rio Grande do Sul ">
                         </optgroup>
                     </datalist>    
                 </select></br>
 
-                <label for="date_id">Cidade*:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
-            </fieldset>
+            <label for="date_id ">Cidade*:</label></br>
+            <input type="date " name="date " id="date_id " /></p>
 
-            <fieldset id="message">
-                <legend><b>Mensagem do Usuário</b></legend>
-                <label for="date_id">Grau de Urgência:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
+        </fieldset>
 
-                <label for="date_id">Mensagem*:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
+        <fieldset id="message ">
+            <legend><b>Mensagem do Usuário</b></legend>
+            <label for="date_id ">Grau de Urgência:</label></br>
+            <input type="date " name="date " id="date_id " /></p>
 
-                <label for="date_id">Reportar Erro:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
-            </fieldset>
+            <label for="date_id ">Mensagem*:</label></br>
+            <input type="date " name="date " id="date_id " /></p>
 
-            <button type="submit" id="summit_button">Enviar</button>
-            <button type="reset" value="reset_button">Limpar</button>
+            <label for="date_id ">Reportar Erro:</label></br>
+            <input type="date " name="date " id="date_id " /></p>
+        </fieldset>
 
-            <p>*Preenchimento obrigatório</p>
+        <button type="submit " id="summit_button ">Enviar</button>
+        <button type="reset " value="reset_button ">Limpar dados</button>
 
-        </form>
+        <p>*Preenchimento obrigatório</p>
 
-    </font>
+    </form>
+
 
 </body>
 
