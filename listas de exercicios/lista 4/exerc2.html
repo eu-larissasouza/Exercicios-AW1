@@ -8,6 +8,8 @@
     <meta name="description" content="Exercício 2 - Cadastro">
     <title>Cadastro</title>
 
+    <!-- Style: Estilizando a página -->
+
     <style type="text/css">
         form,
         select {
@@ -42,188 +44,207 @@
 
 <body>
 
+    <!-- Form: Criando o formulário -->
     <form>
 
+        <!-- Fieldset: Informações Pessoais -->
+
         <fieldset id="personal">
+
+            <!-- Identificação do Usuário -->
             <legend><b>Identificação do Usuário</b></legend>
 
+            <!-- Campo Nome -->
             <p> <label for="name_id">Nome Completo*:</label></br>
                 <input type="text" name="name" id="name_id" maxlength="50" required autofocus></p>
 
+            <!-- Campo E-mail -->
             <p> <label for="email_id">E-mail*:</label></br>
                 <input type="text" name="email" id="email_id" maxlength="50" required autofocus></p>
 
+            <!-- Campo Senha -->
             <p> <label for="psw_id">Senha*:</label></br>
                 <input type="text" name="password" id="psw_id" maxlength="30" required autofocus></p>
 
+            <!-- Campo Telefone -->
             <label for="date_id">Telefone*:</label></br>
             <input type="tel" name="telefone" id="telefone_id" maxlength="11" required autofocus></p>
 
+            <!-- Campo CPF -->
             <p> <label for="CPF_id">CPF*</label></br>
                 <input type="number" name="CPF" id="CPF_id" maxlength="12" required autofocus></p>
 
-            <fieldset id="sexo_id">
-                <legend style="font-size: 15px">Sexo*</legend>
-                <input type="radio" name="sexo" id="masculino">
-                <label for="masculino">Masculino</label>
-                <input type="radio" name="sexo" id="feminino">
-                <label for="feminino">Feminino</label>
-            </fieldset>
+            <!-- Campo Sexo -->
+            <p> Sexo*:
+                <input type="radio" name="sexo" value="masculino">Masculino.
+                <input type="radio" name="sexo" value="feminino">Feminino.
+                <p>
 
-            <p> <label for="date_id">Data de nascimento*:</label></br>
-                <input type="date" name="date" id="date_id" /></p>
+                    <!-- Campo Data de Nascimento -->
+                    <p> <label for="date_id">Data de nascimento*:</label></br>
+                        <input type="date" name="date" id="date_id" /></p>
 
-            <p>
-                <label for="estadocivil_id">Estado Civil*:</label></br>
-                <select name=" estadocivil_id" id="estado_civil ">
-                    <option value=" "></option>
-                    <option value="Solteiro">Solteiro</option>
-                    <option value="Casado">Casado</option>
-                    <option value="Separado">Separado</option>
-                    <option value="Divorciado">Divorciado</option>
-                    <option value="Viúvo">Viúvo</option>
-                    <option value="União Estável">União Estável</option>
-                </select>
-            </p>
+                    <!-- Campo Estado Civil -->
+                    <p>
+                        <label for="estadocivil_id">Estado Civil*:</label></br>
+                        <select name=" estadocivil_id" id="estado_civil ">
+                            <option value=" "></option>
+                            <option value="Solteiro">Solteiro</option>
+                            <option value="Casado">Casado</option>
+                            <option value="Separado">Separado</option>
+                            <option value="Divorciado">Divorciado</option>
+                            <option value="Viúvo">Viúvo</option>
+                            <option value="União Estável">União Estável</option>
+                        </select>
+                    </p>
 
-            <p>
-                <label for="estadocivil_id">Escolaridade*:</label></br>
-                <select name="escolaridade" id="escolaridade_id">
-                    <option value=" "></option>
-                    <option value="Ensino Fundamental">Ensino Fundamental</option>
-                    <option value="Ensino Medio">Ensino Medio</option>
-                    <option value="Ensino Superior">Ensino Superior</option>
-                    <option value="Ensino Fundamental Incompleto">Ensino Fundamental Incompleto</option>
-                    <option value="Ensino Medio Incompleto">Ensino Medio Incompleto</option>
-                    <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
-                </select>
-            </p>
+                    <!-- Campo Escolaridade -->
+                    <p>
+                        <label for="estadocivil_id">Escolaridade*:</label></br>
+                        <select name="escolaridade" id="escolaridade_id">
+                            <option value=" "></option>
+                            <option value="Ensino Fundamental">Ensino Fundamental</option>
+                            <option value="Ensino Medio">Ensino Medio</option>
+                            <option value="Ensino Superior">Ensino Superior</option>
+                            <option value="Ensino Fundamental Incompleto">Ensino Fundamental Incompleto</option>
+                            <option value="Ensino Medio Incompleto">Ensino Medio Incompleto</option>
+                            <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                        </select>
+                    </p>
 
-            <p><label for="ocupacao_id">Ocupação principal:</label></br>
-                <input type="text" name="ocupacao" id="ocupacao_id" /></p>
+                    <!-- Campo Ocupação principal -->
+                    <p><label for="ocupacao_id">Ocupação principal:</label></br>
+                        <input type="text" name="ocupacao" id="ocupacao_id" /></p>
 
-            <p><label for="renda_id">Renda Mensal:</label></br>
-                <input type="text" name="renda" id="renda_id" /></p>
+                    <!-- Campo Renda Mensal -->
+                    <p><label for="renda_id">Renda Mensal:</label></br>
+                        <input type="text" name="renda" id="renda_id" /></p>
 
-            <p><label for="numero_id">Número de Dependentes:</label></br>
-                <input type="number" name="numero " id="numero_id" /></p>
+                    <!-- Campo Número de Dependentes -->
+                    <p><label for="numero_id">Número de Dependentes:</label></br>
+                        <input type="number" name="numero " id="numero_id" /></p>
 
         </fieldset>
         </br>
 
+        <!-- Fieldset: Localização -->
         <fieldset id="localization">
             <legend><b>Localização</b></legend>
 
+            <!-- Campo Estado -->
             <label for="estado_id">Estado*:</label></br>
             <select name="estado" id="estado_id ">
-                    <datalist id="Norte ">
-                        <optgroup label="Norte ">
-                            <option value=" "></option>
-                            <option value="AC " label="Acre ">
-                            <option value="AM " label="Amazonas ">
-                            <option value="AP " label="Amapá ">
-                            <option value="TO " label="Tocantins ">    
-                            <option value="PA " label="Pará ">
-                            <option value="RR " label="Roraima ">
-                            <option value="RO " label="Rondônia ">           
-                        </optgroup>
-                    </datalist>
-                    <datalist id="Nordeste ">
-                        <optgroup label="Nordeste ">
-                            <option value="CE " label="Ceará ">     
-                            <option value="AL " label="Alagoas ">     
-                            <option value="BA " label="Bahia ">     
-                            <option value="MA " label="Maranhão ">     
-                            <option value="PB " label="Paraíba ">    
-                            <option value="PE " label="Pernambuco ">     
-                            <option value="PI " label="Piauí ">     
-                            <option value="RN " label="Rio Grande do Norte ">
-                            <option value="SE " label="Sergipe ">     
-                        </optgroup>
-                    </datalist>
-                    <datalist id="Centro-Oeste ">
-                        <optgroup label="Centro-Oeste ">
-                            <option value="GO " label="Goiás "> 
-                            <option value="MT " label="Mato Grosso "> 
-                            <option value="MS " label="Mato Grosso do Sul "> 
-                            <option value="DF " label="Distrito Federal "> 
-                        </optgroup>
-                    </datalist>
-                    <datalist id="Sudeste ">
-                        <optgroup label="Sudeste ">
-                            <option value="SP " label="São Paulo ">
-                            <option value="MG " label="Minas Gerais ">
-                            <option value="ES " label="Espírito Santo ">
-                            <option value="RJ " label="Rio de Janeiro ">
-                        </optgroup>
-                    </datalist>
-                    <datalist id="Sul ">
-                        <optgroup label="Sul ">
-                            <option value="PR " label="Paraná ">
-                            <option value="SC " label="Santa Catarina ">
-                            <option value="RS " label="Rio Grande do Sul ">
-                        </optgroup>
-                    </datalist>    
-                </select></br>
+                <datalist id="Norte ">
+                    <optgroup label="Norte ">
+                        <option value=" "></option>
+                        <option value="AC " label="Acre ">
+                        <option value="AM " label="Amazonas ">
+                        <option value="AP " label="Amapá ">
+                        <option value="TO " label="Tocantins ">
+                        <option value="PA " label="Pará ">
+                        <option value="RR " label="Roraima ">
+                        <option value="RO " label="Rondônia ">
+                    </optgroup>
+                </datalist>
+                <datalist id="Nordeste ">
+                    <optgroup label="Nordeste ">
+                        <option value="CE " label="Ceará ">
+                        <option value="AL " label="Alagoas ">
+                        <option value="BA " label="Bahia ">
+                        <option value="MA " label="Maranhão ">
+                        <option value="PB " label="Paraíba ">
+                        <option value="PE " label="Pernambuco ">
+                        <option value="PI " label="Piauí ">
+                        <option value="RN " label="Rio Grande do Norte ">
+                        <option value="SE " label="Sergipe ">
+                    </optgroup>
+                </datalist>
+                <datalist id="Centro-Oeste ">
+                    <optgroup label="Centro-Oeste ">
+                        <option value="GO " label="Goiás ">
+                        <option value="MT " label="Mato Grosso ">
+                        <option value="MS " label="Mato Grosso do Sul ">
+                        <option value="DF " label="Distrito Federal ">
+                    </optgroup>
+                </datalist>
+                <datalist id="Sudeste ">
+                    <optgroup label="Sudeste ">
+                        <option value="SP " label="São Paulo ">
+                        <option value="MG " label="Minas Gerais ">
+                        <option value="ES " label="Espírito Santo ">
+                        <option value="RJ " label="Rio de Janeiro ">
+                    </optgroup>
+                </datalist>
+                <datalist id="Sul ">
+                    <optgroup label="Sul ">
+                        <option value="PR " label="Paraná ">
+                        <option value="SC " label="Santa Catarina ">
+                        <option value="RS " label="Rio Grande do Sul ">
+                    </optgroup>
+                </datalist>
+            </select></br>
 
+            <!-- Campo Cidade -->
             <label for="cidade_id">Cidade*:</label></br>
             <select name="cidade" id="cidade_id">
-                    <datalist id="Norte ">
-                        <optgroup label="Norte ">
-                            <option value=" "></option>
-                            <option value="Rio Branco" label="Rio Branco">
-                            <option value="Manaus" label="Manaus">
-                            <option value="Macapá" label="Macapá">
-                            <option value="Palmas" label="Palmas">    
-                            <option value="Belém" label="Belém">
-                            <option value="Boa Vista" label="Boa Vista">
-                            <option value="Porto Velho" label="Porto Velho">           
-                        </optgroup>
-                    </datalist>
-                    <datalist id="Nordeste ">
-                        <optgroup label="Nordeste ">
-                            <option value="Fortaleza" label="Fortaleza">     
-                            <option value="Maceió" label="Maceió">     
-                            <option value="Salvador" label="Salvador">     
-                            <option value="São Luís" label="São Luís">     
-                            <option value="João Pessoa" label="João Pessoa">    
-                            <option value="Recife" label="Recife">     
-                            <option value="Teresina" label="Teresina">     
-                            <option value="Natal" label="Natal">
-                            <option value="Aracaju" label="Aracaju">     
-                        </optgroup>
-                    </datalist>
-                    <datalist id="Centro-Oeste ">
-                        <optgroup label="Centro-Oeste ">
-                            <option value="Goiânia" label="Goiânia"> 
-                            <option value="Cuiabá" label="Cuiabá"> 
-                            <option value="Campo Grande" label="Campo Grande"> 
-                            <option value="Brasília" label="Brasília"> 
-                        </optgroup>
-                    </datalist>
-                    <datalist id="Sudeste ">
-                        <optgroup label="Sudeste ">
-                            <option value="São Paulo" label="São Paulo">
-                            <option value="Belo Horizonte " label="Belo Horizonte">
-                            <option value="Vitória" label="Vitória">
-                            <option value="Rio de Janeiro" label="Rio de Janeiro">
-                        </optgroup>
-                    </datalist>
-                    <datalist id="Sul ">
-                        <optgroup label="Sul ">
-                            <option value="Curitiba" label="Curitiba">
-                            <option value="Florianópolis" label="Florianópolis">
-                            <option value="Porto Alegre" label="Porto Alegre">
-                         </optgroup>
-                    </datalist>    
-                </select></br>
+                <datalist id="Norte ">
+                    <optgroup label="Norte ">
+                        <option value=" "></option>
+                        <option value="Rio Branco" label="Rio Branco">
+                        <option value="Manaus" label="Manaus">
+                        <option value="Macapá" label="Macapá">
+                        <option value="Palmas" label="Palmas">
+                        <option value="Belém" label="Belém">
+                        <option value="Boa Vista" label="Boa Vista">
+                        <option value="Porto Velho" label="Porto Velho">
+                    </optgroup>
+                </datalist>
+                <datalist id="Nordeste ">
+                    <optgroup label="Nordeste ">
+                        <option value="Fortaleza" label="Fortaleza">
+                        <option value="Maceió" label="Maceió">
+                        <option value="Salvador" label="Salvador">
+                        <option value="São Luís" label="São Luís">
+                        <option value="João Pessoa" label="João Pessoa">
+                        <option value="Recife" label="Recife">
+                        <option value="Teresina" label="Teresina">
+                        <option value="Natal" label="Natal">
+                        <option value="Aracaju" label="Aracaju">
+                    </optgroup>
+                </datalist>
+                <datalist id="Centro-Oeste ">
+                    <optgroup label="Centro-Oeste ">
+                        <option value="Goiânia" label="Goiânia">
+                        <option value="Cuiabá" label="Cuiabá">
+                        <option value="Campo Grande" label="Campo Grande">
+                        <option value="Brasília" label="Brasília">
+                    </optgroup>
+                </datalist>
+                <datalist id="Sudeste ">
+                    <optgroup label="Sudeste ">
+                        <option value="São Paulo" label="São Paulo">
+                        <option value="Belo Horizonte " label="Belo Horizonte">
+                        <option value="Vitória" label="Vitória">
+                        <option value="Rio de Janeiro" label="Rio de Janeiro">
+                    </optgroup>
+                </datalist>
+                <datalist id="Sul ">
+                    <optgroup label="Sul ">
+                        <option value="Curitiba" label="Curitiba">
+                        <option value="Florianópolis" label="Florianópolis">
+                        <option value="Porto Alegre" label="Porto Alegre">
+                    </optgroup>
+                </datalist>
+            </select></br>
 
         </fieldset>
         </br>
 
+        <!-- Fieldset: Mensagem -->
         <fieldset id="message">
             <legend><b>Mensagem do Usuário</b></legend>
 
+            <!-- Campo Grau de Urgência -->
             <p> Grau de Urgência:
                 <input type="radio" name="grau_urgencia" value="leve">Leve!
                 <input type="radio" name="grau_urgencia" value="médio">Médio!
@@ -231,17 +252,22 @@
                 <input type="radio" name="grau_urgencia" value="extremo">Extremamente Grave!
                 <p>
 
+                    <!-- Campo Mensagem -->
                     <p> <label for="mensagem_id">Mensagem*:</label></br>
                         <input type="text" name="mensagem" id="mensagem_id" /></p>
 
+                    <!-- Campo Reportar Erro -->
                     <p> Reportar Erro:</br>
                         <textarea name="comments" cols="35" rows="6">Entre com seu comentário...</textarea></p>
 
         </fieldset>
 
+        <!-- Botão Enviar -->
         <button type="submit" id="summit_button">Enviar</button>
+        <!-- Botão Limpar dados -->
         <button type="reset" value="reset_button">Limpar dados</button>
 
+        <!-- Informação importante: Preenchimento obrigatório -->
         <p style="color:red">*Preenchimento obrigatório</p>
 
     </form>
