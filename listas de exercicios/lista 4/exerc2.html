@@ -12,13 +12,18 @@
         form,
         select {
             font-family: "Ebrima";
-            font-size: 16px;
+            font-size: 15px;
             color: #353839;
         }
         
+        legend {
+            font-size: 17px;
+        }
+        
+        textarea,
         input {
             font-family: "Ebrima";
-            font-size: 16px;
+            font-size: 15px;
             color: #353839;
         }
         
@@ -27,6 +32,10 @@
             font-size: 15px;
             margin: 15px;
         }
+        
+        select {
+            width: 170px;
+        }
     </style>
 
 </head>
@@ -34,6 +43,7 @@
 <body>
 
     <form>
+
         <fieldset id="personal">
             <legend><b>Identificação do Usuário</b></legend>
 
@@ -50,51 +60,65 @@
             <input type="tel" name="telefone" id="telefone_id" maxlength="11" required autofocus></p>
 
             <p> <label for="CPF_id">CPF*</label></br>
-                <input type="text" name="CPF" id="CPF_id" maxlength="30" required autofocus></p>
+                <input type="number" name="CPF" id="CPF_id" maxlength="12" required autofocus></p>
 
             <fieldset id="sexo_id">
-                <legend>Sexo*</legend>
+                <legend style="font-size: 15px">Sexo*</legend>
                 <input type="radio" name="sexo" id="masculino">
                 <label for="masculino">Masculino</label>
                 <input type="radio" name="sexo" id="feminino">
                 <label for="feminino">Feminino</label>
             </fieldset>
-            </br>
 
-            <label for="date_id">Data de nascimento*:</label></br>
-            <input type="date" name="date" id="date_id" /></p>
+            <p> <label for="date_id">Data de nascimento*:</label></br>
+                <input type="date" name="date" id="date_id" /></p>
 
-            <label for="estadocivil_id">Estado Civil*:</label></br>
-            <select style="width:150px; name=" estadocivil_id " id="estado_civil ">
-                <option value=" "></option>
-                <option value="Solteiro ">Solteiro</option>
-                <option value="Casado ">Casado</option>
-                <option value="Separado ">Separado</option>
-                <option value="Divorciado ">Divorciado</option>
-                <option value="Viúvo ">Viúvo</option>
-                <option value="União Estável ">União Estável</option>
-            </select></br>
+            <p>
+                <label for="estadocivil_id">Estado Civil*:</label></br>
+                <select name=" estadocivil_id" id="estado_civil ">
+                    <option value=" "></option>
+                    <option value="Solteiro">Solteiro</option>
+                    <option value="Casado">Casado</option>
+                    <option value="Separado">Separado</option>
+                    <option value="Divorciado">Divorciado</option>
+                    <option value="Viúvo">Viúvo</option>
+                    <option value="União Estável">União Estável</option>
+                </select>
+            </p>
 
-            <label for="date_id ">Escolaridade:</label></br>
-            <input type="date " name="date " id="date_id " /></p>
+            <p>
+                <label for="estadocivil_id">Escolaridade*:</label></br>
+                <select name="escolaridade" id="escolaridade_id">
+                    <option value=" "></option>
+                    <option value="Ensino Fundamental">Ensino Fundamental</option>
+                    <option value="Ensino Medio">Ensino Medio</option>
+                    <option value="Ensino Superior">Ensino Superior</option>
+                    <option value="Ensino Fundamental Incompleto">Ensino Fundamental Incompleto</option>
+                    <option value="Ensino Medio Incompleto">Ensino Medio Incompleto</option>
+                    <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                </select>
+            </p>
 
-            <label for="date_id ">Ocupação principal:</label></br>
-            <input type="date " name="date " id="date_id " /></p>
+            <p><label for="ocupacao_id">Ocupação principal:</label></br>
+                <input type="text" name="ocupacao" id="ocupacao_id" /></p>
 
-            <label for="date_id ">Renda Mensal:</label></br>
-            <input type="date " name="date " id="date_id " /></p>
+            <p><label for="renda_id">Renda Mensal:</label></br>
+                <input type="text" name="renda" id="renda_id" /></p>
 
-            <label for="numero_id ">Número de Dependentes:</label></br>
-            <input type="number " name="numero " id="numero_id " /></p>
+            <p><label for="numero_id">Número de Dependentes:</label></br>
+                <input type="number" name="numero " id="numero_id" /></p>
+
         </fieldset>
+        </br>
 
-        <fieldset id="localization ">
+        <fieldset id="localization">
             <legend><b>Localização</b></legend>
 
-            <label for="estado_id ">Estado*:</label></br>
-            <select name="estado " id="estado_id ">
+            <label for="estado_id">Estado*:</label></br>
+            <select name="estado" id="estado_id ">
                     <datalist id="Norte ">
                         <optgroup label="Norte ">
+                            <option value=" "></option>
                             <option value="AC " label="Acre ">
                             <option value="AM " label="Amazonas ">
                             <option value="AP " label="Amapá ">
@@ -142,27 +166,83 @@
                     </datalist>    
                 </select></br>
 
-            <label for="date_id ">Cidade*:</label></br>
-            <input type="date " name="date " id="date_id " /></p>
+            <label for="cidade_id">Cidade*:</label></br>
+            <select name="cidade" id="cidade_id">
+                    <datalist id="Norte ">
+                        <optgroup label="Norte ">
+                            <option value=" "></option>
+                            <option value="Rio Branco" label="Rio Branco">
+                            <option value="Manaus" label="Manaus">
+                            <option value="Macapá" label="Macapá">
+                            <option value="Palmas" label="Palmas">    
+                            <option value="Belém" label="Belém">
+                            <option value="Boa Vista" label="Boa Vista">
+                            <option value="Porto Velho" label="Porto Velho">           
+                        </optgroup>
+                    </datalist>
+                    <datalist id="Nordeste ">
+                        <optgroup label="Nordeste ">
+                            <option value="Fortaleza" label="Fortaleza">     
+                            <option value="Maceió" label="Maceió">     
+                            <option value="Salvador" label="Salvador">     
+                            <option value="São Luís" label="São Luís">     
+                            <option value="João Pessoa" label="João Pessoa">    
+                            <option value="Recife" label="Recife">     
+                            <option value="Teresina" label="Teresina">     
+                            <option value="Natal" label="Natal">
+                            <option value="Aracaju" label="Aracaju">     
+                        </optgroup>
+                    </datalist>
+                    <datalist id="Centro-Oeste ">
+                        <optgroup label="Centro-Oeste ">
+                            <option value="Goiânia" label="Goiânia"> 
+                            <option value="Cuiabá" label="Cuiabá"> 
+                            <option value="Campo Grande" label="Campo Grande"> 
+                            <option value="Brasília" label="Brasília"> 
+                        </optgroup>
+                    </datalist>
+                    <datalist id="Sudeste ">
+                        <optgroup label="Sudeste ">
+                            <option value="São Paulo" label="São Paulo">
+                            <option value="Belo Horizonte " label="Belo Horizonte">
+                            <option value="Vitória" label="Vitória">
+                            <option value="Rio de Janeiro" label="Rio de Janeiro">
+                        </optgroup>
+                    </datalist>
+                    <datalist id="Sul ">
+                        <optgroup label="Sul ">
+                            <option value="Curitiba" label="Curitiba">
+                            <option value="Florianópolis" label="Florianópolis">
+                            <option value="Porto Alegre" label="Porto Alegre">
+                         </optgroup>
+                    </datalist>    
+                </select></br>
 
         </fieldset>
+        </br>
 
-        <fieldset id="message ">
+        <fieldset id="message">
             <legend><b>Mensagem do Usuário</b></legend>
-            <label for="date_id ">Grau de Urgência:</label></br>
-            <input type="date " name="date " id="date_id " /></p>
 
-            <label for="date_id ">Mensagem*:</label></br>
-            <input type="date " name="date " id="date_id " /></p>
+            <p> Grau de Urgência:
+                <input type="radio" name="grau_urgencia" value="leve">Leve!
+                <input type="radio" name="grau_urgencia" value="médio">Médio!
+                <input type="radio" name="grau_urgencia" value="grave">Grave!
+                <input type="radio" name="grau_urgencia" value="extremo">Extremamente Grave!
+                <p>
 
-            <label for="date_id ">Reportar Erro:</label></br>
-            <input type="date " name="date " id="date_id " /></p>
+                    <p> <label for="mensagem_id">Mensagem*:</label></br>
+                        <input type="text" name="mensagem" id="mensagem_id" /></p>
+
+                    <p> Reportar Erro:</br>
+                        <textarea name="comments" cols="35" rows="6">Entre com seu comentário...</textarea></p>
+
         </fieldset>
 
-        <button type="submit " id="summit_button ">Enviar</button>
-        <button type="reset " value="reset_button ">Limpar dados</button>
+        <button type="submit" id="summit_button">Enviar</button>
+        <button type="reset" value="reset_button">Limpar dados</button>
 
-        <p>*Preenchimento obrigatório</p>
+        <p style="color:red">*Preenchimento obrigatório</p>
 
     </form>
 
