@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="pt-br">
+    <meta name="author" content="Larissa Alves de Souza">
+    <meta name="description" content="Avaliação 1 - Prática">
+    <title>Formulário de Cadastro</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="Logo">
+            <img src="LIVENEWS.png" width="150px">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="" class="selecionado">Cadastro</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interna.html">Influenzavirus</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h3>Faça seu cadastro!</h3>
+        <form>
+
+            <fieldset id="personal">
+                <legend><b>Identificação do Usuário</b></legend>
+                <p> <label for="email_id">E-mail*:</label></br>
+                    <input type="text" name="email" id="email_id" maxlength="50" required autofocus></p>
+
+                <p> <label for="psw_id">Senha*:</label></br>
+                    <input type="text" name="password" id="psw_id" maxlength="30" required autofocus></p>
+
+                <p> <label for="name_id">Nome*:</label></br>
+                    <input type="text" name="name" id="name_id" maxlength="50" required autofocus></p>
+
+                <p> <label for="date_id">Data de nascimento*:</label></br>
+                    <input type="date" name="date" id="date_id" /></p>
+
+                <fieldset>
+                    <legend>Gênero*:</legend>
+                    <input type="radio" id="masc" name="gênero" value="Masculino" required>
+                    <label for="masc">Masculino</label>
+                    <input type="radio" id="fem" name="gênero" value="Feminino" required>
+                    <label for="fem">Feminino</label><br>
+                </fieldset>
+
+                <p> <label for="RG_id">RG*</label></br>
+                    <input type="number" name="RG" id="RG_id" maxlength="9" required autofocus></p>
+
+                <label for="estado_id">Estado Emissor RG*:</label></br>
+                <select name="estado" id="estado_id ">
+                    <datalist id="Sudeste ">
+                        <option value=" "></option>
+                        <optgroup label="Sudeste ">
+                            <option value="SP " label="São Paulo ">
+                            <option value="MG " label="Minas Gerais ">
+                        </optgroup>
+                    </datalist>
+                    <datalist id="Centro-Oeste ">
+                        <optgroup label="Centro-Oeste ">
+                            <option value="GO " label="Goiás ">
+                            <option value="DF " label="Distrito Federal ">
+                        </optgroup>
+                    </datalist>
+                    <datalist id="Sul ">
+                        <optgroup label="Sul ">
+                            <option value="PR " label="Paraná ">
+                        </optgroup>
+                    </datalist>
+                </select></br>
+
+                <p> <label for="CPF_id">CPF*</label></br>
+                    <input type="number" name="CPF" id="CPF_id" maxlength="12" required autofocus></p>
+
+                <fieldset>
+                    <legend>Endereço:</legend>
+
+                    <p> <label for="rua">Rua</label><br>
+                        <input type="text" id="rua_id" name="rua"></p>
+
+                    <p> <label for="numero">Numero</label><br>
+                        <input type="number" id="numero_id" name="numero"></p>
+
+                    <p> <label for="complemento">Complemento</label><br>
+                        <input type="text" id="complemento_id" name="complemento"></p>
+
+                    <p> <label for="cep">CEP</label><br>
+                        <input type="text" id="cep_id" name="cep" placeholder="00000-000" pattern="[0-9]{5}-[0-9]{3}">
+                    </p>
+
+                    <label for="cidade">Cidade</label><br>
+                    <input list="cidades" id="cidade" name="cidade">
+                    <datalist id="cidades">
+                        <option value="São Paulo" label="São Paulo">
+                        <option value="Diadema" label="Diadema">
+                        <option value="São Bernardo do Campo" label="São Bernardo do Campo">
+                        <option value="Santo André" label="Santo André">
+                        <option value="Mauá" label="Mauá">
+                    </datalist>
+
+                    <p> <label for="uf">UF</label><br>
+                        <input type="text" id="uf" name="uf" value="SP" readonly></p>
+
+                </fieldset>
+                <br>
+            </fieldset>
+            </br>
+
+            <fieldset id="complement">
+                <legend><b>Dados Complementares</b></legend>
+
+                <p>
+                    <label for="estadocivil_id">Estado Civil*:</label></br>
+                    <select name="estadocivil_id" id="estado_civil ">
+                        <option value=" "></option>
+                        <option value="Solteiro">Solteiro</option>
+                        <option value="Casado">Casado</option>
+                        <option value="Divorciado">Divorciado</option>
+                        <option value="Viúvo">Viúvo</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Vacinado contra COVID-19:</legend>
+                    <input type="radio" id="yes" name="vacina" value="Sim" required>
+                    <label for="yes">Sim</label>
+                    <input type="radio" id="no" name="vacina" value="Não" required>
+                    <label for="no">Não</label><br>
+                </fieldset>
+
+                <p> <label for="profissao">Profissão</label><br>
+                    <input type="text" id="profissao_id" name="profissao"></p>
+
+                <fieldset>
+                    <legend>Doenças crônicas:</legend>
+                    <input type="checkbox" id="diabetes_id" name="doenças-cronicas" value="diabetes">
+                    <label for="diabetes_id">Diabetes</label><br>
+                    <input type="checkbox" id="cardiopatia_id" name="doenças-cronicas" value="cardiopatia">
+                    <label for="cardiopatia_id">Cardiopatia</label><br>
+                    <input type="checkbox" id="hipertensão_id" name="doenças-cronicas" value="hipertensão">
+                    <label for="hipertensão_id">Hipertensão</label><br>
+                    <input type="checkbox" id="doença-renal_id" name="doenças-cronicas" value="doença-renal">
+                    <label for="doença-renal_id">Doença Renal</label><br>
+                    <input type="checkbox" id="obesidade-morbida_id" name="doenças-cronicas" value="obesidade-morbida">
+                    <label for="obesidade-morbida_id">Obesidade Mórbida</label><br>
+                    <input type="checkbox" id="arritmia-cardiaca_id" name="doenças-cronicas" value="arritmia-cardiaca">
+                    <label for="arritmia-cardiaca_id">Arritmia Cardíaca</label><br>
+                    <input type="checkbox" id="insuficiência-cardiaca_id" name="doenças-cronicas" value="insuficiência-cardiaca">
+                    <label for="insuficiência-cardiaca_id">Insuficiência Cardíaca</label><br>
+                </fieldset><br>
+            </fieldset>
+
+            <button type="submit" id="summit_button">Enviar</button>
+            <button type="reset" value="reset_button">Limpar dados</button>
+
+            <p>*Preenchimento obrigatório</p>
+            </fieldset>
+
+        </form>
+
+    </section>
+
+    <hr>
+    <footer>
+        <p>© 2021 Larissa Souza</br>
+            <a href="mailto: larissa.alves.souza@outlook.com" target="_blank">Fale Conosco
+            </a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

@@ -6,22 +6,104 @@
     <meta http-equiv="content-language" content="pt-br">
     <meta name="author" content="Larissa Alves de Souza">
     <meta name="description" content="Exercício 1. a) - Marcação Semântica">
-    <title>Sobrescrito e Subscrito</title>
+    <title>Meu site</title>
 
     <style type="text/css">
-        table {
-            border: none;
+        body {
+            font-family: Ebrima;
+            position: relative;
+            padding-bottom: 58px;
+            min-height: 100vh;
+            margin: 0 auto;
+            width: 900px;
         }
         
-        th,
-        td {
-            font-family: "Ebrima";
-            font-size: 15px;
-            color: #3C0C84;
-            border: none;
-            background-color: #98D4E1;
-            padding: 5px;
-            width: 120px;
+        section {
+            margin-bottom: 60px;
+        }
+        
+        header {
+            margin-bottom: 10px;
+            height: 80px;
+            border-bottom: 4px solid #c05440;
+        }
+        
+        nav {
+            margin-top: -20px;
+            width: 320px;
+            float: right;
+        }
+        
+        nav a {
+            padding: 6px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #c05440;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-decoration: none;
+            color: rgb(24, 25, 27);
+        }
+        
+        .selecionado {
+            background-color: #dc5c44;
+            color: rgb(24, 25, 27);
+            padding-top: 10px;
+        }
+        
+        aside {
+            float: right;
+            width: 200px;
+            height: 250px;
+            text-align: center;
+        }
+        
+        aside p {
+            bottom: 0px;
+        }
+        
+        article {
+            width: 640px;
+        }
+        
+        .Posts {
+            padding-left: 10px;
+        }
+        
+        .Títulos {
+            font-size: 21px;
+        }
+        
+        footer {
+            text-align: center;
+            background-color: #dc5c44;
+            color: #f0f0f0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .Sublinhado {
+            margin-top: 25px;
+            width: 630px;
+            border-bottom: 2px solid rgb(216, 216, 216);
+            font-size: 16px;
+        }
+        
+        #Coment {
+            font-size: 19px;
+        }
+        
+        .Comentário {
+            width: 600px;
+        }
+        
+        .foto {
+            float: left;
+        }
+        
+        .Comentário p {
+            padding-left: 60px;
         }
     </style>
 
@@ -29,6 +111,95 @@
 
 <body>
 
+    <header>
+        <div class="Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/We_Bare_Bears_wordmark.svg/1200px-We_Bare_Bears_wordmark.svg.png" width="150px">
+        </div>
+
+        <nav>
+            <a href="" class="selecionado">Home</a>
+            <a href="">Destaques</a>
+            <a href="">Arquivo</a>
+        </nav>
+    </header>
+
+    <aside>
+        <img src="http://pm1.narvii.com/6571/8866e6ed877cdc1efa9daddc0ebd937a2305aa54_00.jpg" width="200px">
+        <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu facilisis metus, nec auctor neque.
+        </p>
+    </aside>
+
+    <section>
+
+        <div class="Sublinhado">
+            <h2>Últimos Posts</h2>
+        </div>
+
+        <article>
+
+            <div class="Posts">
+                <p class="Títulos"><b>Título da postagem de teste</b></p>
+                <p align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                    more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                <figure>
+                    <img src="https://i.pinimg.com/originals/2d/05/47/2d0547bed90ddaa503c843ff492b35c9.jpg " alt="Ursos Sem Curso " width="520px ">
+                    <figcaption>Wallpaper Ursos Sem Curso</figcaption>
+                </figure>
+
+                <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu facilisis metus, nec auctor neque. Nulla volutpat, nibh sed venenatis dignissim, quam ipsum eleifend sapien, nec suscipit nulla nisi sed nibh.</p>
+            </div>
+
+            <article>
+                <br>
+                <p id="Coment "><b>Comentários</b></p>
+
+                <div class="Comentário ">
+                    <img src="https://image.flaticon.com/icons/png/512/1361/1361728.png " width="40px " class="foto ">
+                    <div class="Nome ">
+                        <p><b>Clara Braga</b></p>
+                    </div>
+                    <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu facilisis metus, nec auctor neque. Nulla volutpat, nibh sed venenatis dignissim, quam ipsum eleifend sapien, nec suscipit nulla nisi sed nibh.</p>
+                </div>
+            </article>
+
+            <article>
+
+                <div class="Comentário ">
+                    <img src="https://image.flaticon.com/icons/png/512/1361/1361728.png " width="40x " class="foto ">
+
+                    <div class="Nome ">
+                        <p><b>Flávia Fortunato</b></p>
+                    </div>
+                    <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu facilisis metus, nec auctor neque. </p>
+
+                </div>
+
+            </article>
+
+        </article>
+
+    </section>
+
+    <section>
+
+        <div class="Sublinhado ">
+            <h2>Posts em destaque</h2>
+        </div>
+
+        <article>
+            <p class="Títulos "><b>Título do post de destaque</b></p>
+            <p align="justify">Nam in euismod diam. Curabitur pellentesque sollicitudin condimentum. Pellentesque molestie lorem in enim consequat maximus. Phasellus ac tempus elit. Proin viverra augue et diam imperdiet eleifend. Maecenas pulvinar egestas semper. Quisque
+                dictum interdum ex, vitae dignissim lorem dictum ac. Sed interdum quam vel viverra interdum. Suspendisse feugiat blandit enim eget iaculis. In posuere congue ligula, sit amet sollicitudin mi pretium eget. Etiam id gravida neque. Ut ut
+                velit nec quam malesuada tempor luctus ac dolor.</p>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>Copyright 2021</p>
+    </footer>
 
 </body>
 
